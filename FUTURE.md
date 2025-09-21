@@ -1,0 +1,1 @@
+[] Start technical blog and youtube as well
