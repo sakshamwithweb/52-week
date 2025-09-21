@@ -1,0 +1,67 @@
+[
+    {
+        "title": "Visisphere",
+        "description": "Instant 3D chapter generation",
+        "link": "https://github.com/sakshamwithweb/visisphere"
+    },
+    {
+        "title": "tbsubject",
+        "description": "Insert text behind subject in Image",
+        "link": "https://github.com/sakshamwithweb/tbsubject"
+    },
+    {
+        "title": "text-to-art",
+        "description": "Insert text behind subject in Image and Video",
+        "link": "https://github.com/sakshamwithweb/text-to-art"
+    },
+    {
+        "title": "NeuroSketch",
+        "description": "AI-powered sketch to digital painting converter",
+        "link": "https://github.com/sakshamwithweb/neurosketch"
+    },
+    {
+        "title": "ChronoLens",
+        "description": "Visualize history timelines in interactive 3D",
+        "link": "https://github.com/sakshamwithweb/chronolens"
+    },
+    {
+        "title": "EchoNotes",
+        "description": "Voice to smart notes with semantic tagging",
+        "link": "https://github.com/sakshamwithweb/echonotes"
+    },
+    {
+        "title": "CodeMorph",
+        "description": "Transform code between languages instantly",
+        "link": "https://github.com/sakshamwithweb/codemorph"
+    },
+    {
+        "title": "LensAR",
+        "description": "Augmented reality object recognition toolkit",
+        "link": "https://github.com/sakshamwithweb/lensar"
+    },
+    {
+        "title": "StoryForge",
+        "description": "Collaborative AI-driven story writing platform",
+        "link": "https://github.com/sakshamwithweb/storyforge"
+    },
+    {
+        "title": "PixelFlow",
+        "description": "Dynamic particle animations for web projects",
+        "link": "https://github.com/sakshamwithweb/pixelflow"
+    },
+    {
+        "title": "DataWeaver",
+        "description": "Unify and visualize multi-source datasets",
+        "link": "https://github.com/sakshamwithweb/dataweaver"
+    },
+    {
+        "title": "SynthSpace",
+        "description": "Create generative 3D environments with AI",
+        "link": "https://github.com/sakshamwithweb/synthspace"
+    },
+    {
+        "title": "MindTrail",
+        "description": "Track and visualize thought processes as mind maps",
+        "link": "https://github.com/sakshamwithweb/mindtrail"
+    }
+]
