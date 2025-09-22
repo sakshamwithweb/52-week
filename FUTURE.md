@@ -1,3 +1,3 @@
+- [x] In progress bar for future week, you may show your future project ;)
 - [ ] Start technical blog and youtube as well
-- [ ] In progress bar for future week, you may show your future project ;)
 - [ ] Suppose you took 2 weeks for one projector more, in website it will look normal but it is special case, hence on that time draw a line like or soething that shows they are linked
