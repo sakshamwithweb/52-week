@@ -10,12 +10,14 @@ import { useEffect, useState } from "react"
 export const ProgressBar = () => {
     const [weeks, setWeeks] = useState(Array.from(Array(52).keys())) // All 52 weeks
     const [completedWeeks, setCompletedWeeks] = useState(null)
+    const [futureProject, setFutureProject] = useState(null)
 
     useEffect(() => {
         (async () => {
             const completedWeeks = await fetch("/api/get_week")
             const { data } = await completedWeeks.json()
-            setCompletedWeeks(data)
+            setCompletedWeeks(data.completed)
+            setFutureProject(data.future)
         })()
     }, [])
 
@@ -27,7 +29,7 @@ export const ProgressBar = () => {
                     return <div key={index} className="flex justify-center">
                         <Tooltip>
                             <TooltipTrigger>
-                                <Link href={completedWeeks[index].link} target="_blank" className="bg-red-500 hover:scale-110 transition duration-300 h-14 w-14 rounded-full flex justify-center items-center">{index + 1}</Link>
+                                <Link href={completedWeeks[index].link} target="_blank" className="bg-green-500 hover:scale-110 transition duration-300 h-14 w-14 rounded-full flex justify-center items-center">{index + 1}</Link>
                             </TooltipTrigger>
                             <TooltipContent>
                                 <p className="text-lg font-bold">{completedWeeks[index].title}</p>
@@ -36,11 +38,28 @@ export const ProgressBar = () => {
                         </Tooltip>
                     </div>
                 } else { // Future week
-                    return <div key={index} className="flex justify-center">
-                        <div className="bg-gray-500 hover:scale-110 transition duration-300 h-14 w-14 rounded-full flex justify-center items-center cursor-pointer">
-                            {index + 1}
+                    if (index - (completedWeeks.length - 1) <= futureProject.length) {
+                        return <div key={index} className="flex justify-center">
+                            <Tooltip>
+                                <TooltipTrigger>
+                                    <div className="bg-gray-500 hover:scale-110 transition duration-300 h-14 w-14 rounded-full flex justify-center items-center relative cursor-pointer">
+                                        <p>{index + 1}</p>
+                                        <div className="absolute h-2 w-2 top-1 right-1 rounded-full bg-red-500"></div>
+                                    </div>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p className="text-lg font-bold">Future: {futureProject[index - completedWeeks.length].title}</p>
+                                    <p className="text-md">{futureProject[index - completedWeeks.length].description}</p>
+                                </TooltipContent>
+                            </Tooltip>
                         </div>
-                    </div>
+                    } else {
+                        return <div key={index} className="flex justify-center">
+                            <div className="bg-gray-500 hover:scale-110 transition duration-300 h-14 w-14 rounded-full flex justify-center items-center cursor-pointer">
+                                {index + 1}
+                            </div>
+                        </div>
+                    }
                 }
             })}
         </div>
