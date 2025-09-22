@@ -1,4 +1,5 @@
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata = {
   title: "52 Week - 52 Stuff",
@@ -7,9 +8,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

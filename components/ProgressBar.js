@@ -20,7 +20,7 @@ export const ProgressBar = () => {
     }, [])
 
     return (
-        <div className="grid grid-cols-8 border border-white gap-4 p-4">
+        <div className="grid grid-cols-8 gap-4 p-4">
             {Array.isArray(completedWeeks) && Array.isArray(weeks) && weeks.map((item, index) => {
                 // We are saying: index of the current week must be equal or less than the total completed week. -1 because index starts from 0 whereas length starts from 1 ;)
                 if (index <= completedWeeks.length - 1) { // When week is completed
