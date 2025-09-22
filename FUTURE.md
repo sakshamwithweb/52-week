@@ -1,1 +1,2 @@
-[] Start technical blog and youtube as well
+- [ ] Start technical blog and youtube as well
+- [ ] In progress bar for future week, you may show your future project ;)
