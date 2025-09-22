@@ -19,8 +19,6 @@ export const ProgressBar = () => {
         })()
     }, [])
 
-    // We want: map the whole weeks and in each check whether the completedWeek[index] is present or not, if it does, show it or no.
-
     return (
         <div className="grid grid-cols-8 border border-white gap-4 p-4">
             {Array.isArray(completedWeeks) && Array.isArray(weeks) && weeks.map((item, index) => {
@@ -39,7 +37,7 @@ export const ProgressBar = () => {
                     </div>
                 } else { // Future week
                     return <div key={index} className="flex justify-center">
-                        <div className="bg-gray-500 hover:scale-110 transition duration-300 h-14 w-14 rounded-full flex justify-center items-center">
+                        <div className="bg-gray-500 hover:scale-110 transition duration-300 h-14 w-14 rounded-full flex justify-center items-center cursor-pointer">
                             {index + 1}
                         </div>
                     </div>
